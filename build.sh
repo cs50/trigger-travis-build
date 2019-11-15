@@ -62,7 +62,7 @@ function valid_options() {
         [ -n "${ORG+x}" ])
 }
 
-if !valid_options; then
+if ! valid_options; then
     usage
 fi
 
