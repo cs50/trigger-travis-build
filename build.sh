@@ -19,7 +19,7 @@ function usage() {
 
 
 function log() {
-    [[ $VERBOSE -eq 1 ]] && echo "$1 ..."
+    [[ $VERBOSE -eq 1 ]] && echo "$1"
 }
 
 while [ $# -gt 0 ]; do
@@ -99,4 +99,4 @@ curl -s -X POST \
     -H "Travis-API-Version: 3" \
     -H "Authorization: token $TRAVIS_TOKEN" \
     -d "$body" \
-    https://api.travis-ci.com/repo/$ORG%2F$REPO/requests
+    "https://api.travis-ci.com/repo/$ORG%2F$REPO/requests"
